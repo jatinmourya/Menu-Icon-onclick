@@ -1,0 +1,206 @@
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #000000;
+      }
+      .box1 {
+        position: relative;
+        height: 50px;
+        width: 60px;
+      }
+      .box1 span {
+        display: block;
+        opacity: 1;
+        position: absolute;
+        border-radius: 20px;
+        background: cyan;
+        height: 10px;
+        width: 100%;
+        transition: 0.25s ease-in-out;
+      }
+      .box1 span:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+      .box1 span:nth-child(2) {
+        top: 20px;
+        left: 0;
+      }
+      .box1 span:nth-child(3) {
+        top: 40px;
+        left: 0;
+      }
+      .box1.active span:nth-child(1) {
+        top: 20px;
+        transform: rotate(45deg);
+      }
+      .box1.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .box1.active span:nth-child(3) {
+        top: 20px;
+        transform: rotate(-45deg);
+      }
+      .box2 {
+        position: relative;
+        height: 50px;
+        width: 60px;
+      }
+
+      .box2 span {
+        display: block;
+        opacity: 1;
+        position: absolute;
+        border-radius: 20px;
+        background: cyan;
+        height: 10px;
+        width: 100%;
+        transition: 0.25s ease-in-out;
+      }
+      .box2 span:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+      .box2 span:nth-child(2) {
+        top: 20px;
+        left: 0;
+      }
+      .box2 span:nth-child(3) {
+        top: 40px;
+        left: 0;
+      }
+      .box2.active span:nth-child(1) {
+        top: 20px;
+        transform: rotate(135deg);
+      }
+
+      .box2.active span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+      }
+      .box2.active span:nth-child(3) {
+        top: 20px;
+        transform: rotate(-135deg);
+      }
+
+      .box3 {
+        position: relative;
+        height: 50px;
+        width: 60px;
+      }
+      .box3 span {
+        background: cyan;
+        display: block;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 10px;
+        width: 50%;
+        transition: 0.25s ease-in-out;
+      }
+      /* odds  */
+      .box3 span:nth-child(odd) {
+        left: 0px;
+        border-radius: 20px 0 0 20px;
+      }
+      /* evens */
+      .box3 span:nth-child(even) {
+        left: 50%;
+        border-radius: 0 20px 20px 0;
+      }
+
+      /* positioning */
+      .box3 span:nth-child(1),
+      .box3 span:nth-child(2) {
+        top: 0px;
+      }
+      .box3 span:nth-child(3),
+      .box3 span:nth-child(4) {
+        top: 20px;
+      }
+      .box3 span:nth-child(5),
+      .box3 span:nth-child(6) {
+        top: 40px;
+      }
+      /* positioning */
+
+      .box3.active span:nth-child(1),
+      .box3.active span:nth-child(6) {
+        transform: rotate(45deg);
+      }
+      .box3.active span:nth-child(2),
+      .box3.active span:nth-child(5) {
+        transform: rotate(-45deg);
+      }
+      .box3.active span:nth-child(3) {
+        opacity: 0;
+        left: -30px;
+      } 
+      .box3.active span:nth-child(4) {
+        opacity: 0;
+        left: 60px; /* span's width + its movement*/
+      }
+      .box3.active span:nth-child(1),
+      .box3.active span:nth-child(2) {
+        top: 15px;
+      }
+      .box3.active span:nth-child(5),
+      .box3.active span:nth-child(6) {
+        top: 35px;
+      }
+      .box3.active span:nth-child(1),
+      .box3.active span:nth-child(5) {
+        left: 5px;
+      }
+      .box3.active span:nth-child(2),
+      .box3.active span:nth-child(6) {
+        left: calc(50% - 5px);
+      }
+
+      .box4 {
+        position: relative;
+        height: 50px;
+        width: 60px;
+      }
+
+      .box4 span {
+        display: block;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: cyan;
+        height: 10px;
+        width: 100%;
+        transition: 0.25s ease-in-out;
+        border-radius: 20px;
+      }
+      .box4 span:nth-child(1) {
+        top: 0px;
+      }
+      .box4 span:nth-child(2),
+      .box4 span:nth-child(3) {
+        top: 20px;
+      }
+      .box4 span:nth-child(4) {
+        top: 40px;
+      }
+      .box4.active span:nth-child(1),
+      .box4.active span:nth-child(4) {
+        left: 30px;
+        top: 20px;
+        width: 0%;
+      }
+      .box4.active span:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      .box4.active span:nth-child(3) {
+        transform: rotate(-45deg);
+      }
